@@ -1,3 +1,24 @@
+# create random dataset
+test <- data.frame( #
+  "tiefe"= tiefe <- 0:(-29)-20,
+  a <- sample(90, 30, replace = TRUE),
+  b <- sample(90, 30, replace = TRUE),
+  c <- sample(9, 30, replace = TRUE),
+  d <- sample(90, 30, replace = TRUE),
+  e <- sample(90, 30, replace = TRUE),
+    # data with NA
+  f <- c(
+    rep(NA, 5), # 5 x NA
+    sample(90, 10, replace = TRUE),
+    rep(NA, 5), # 5 x NA
+    sample(90, 10, replace = TRUE)),
+  g <- sample(90, 30, replace = TRUE),
+  h <- g,
+  i <- sample(90, 30, replace = TRUE)
+)
+# add column names
+(colnames(test)[2:ncol(test) ] <- paste("Name",letters[1:(ncol(test)-1)]))
+
 # Example 3: colors and types -------------------------------
 t3 <- function(){
     (color <- rep(c("darkred","orange","blue3"), each = 10))
