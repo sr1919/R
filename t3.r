@@ -17,7 +17,7 @@ test <- data.frame( #
   i <- sample(90, 30, replace = TRUE)
 )
 # add column names
-(colnames(test)[2:ncol(test) ] <- paste("Name",letters[1:(ncol(test)-1)]))
+(colnames(test)[2:ncol(test) ] <- paste("#",letters[1:(ncol(test)-1)]))
 
 # Example 3: colors and types -------------------------------
 t3 <- function(){

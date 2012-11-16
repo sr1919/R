@@ -17,7 +17,7 @@ test <- data.frame( #
   i <- sample(90, 30, replace = TRUE)
 )
 # add column names
-(colnames(test)[2:ncol(test) ] <- paste("Genus speciesname",letters[1:(ncol(test)-1)]))
+(colnames(test)[2:ncol(test) ] <- paste("Name #",letters[1:(ncol(test)-1)]))
  
  # Example 1: default -------------------------------
     par(las=1) # labels on axis
@@ -227,7 +227,7 @@ plot.depth(aber,
   xaxis.ticks.minmax=TRUE,# show only min to max
   yaxis.ticks=FALSE,# no  main y ticks
   nx.minor.ticks=0,
-  bty="n"# no box
+  bty="n",# no box
   wa.order = "topleft" # plot abundant species topleft
 )
 title("'wa.order=\"topleft\"'\nsorting according to depth + column sum")
