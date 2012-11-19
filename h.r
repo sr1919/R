@@ -12,5 +12,8 @@ dim( hg )
 fix( hg )
 
 for( i in 1:nrow( hg ) ){
-    plot( hg[i,], hg[1,] ) 
+	png( "img.png", width=400, height=100 )
+    #plot( hg[i,], type"l", ylab="graylevel", xlab="row" )
+    plot( hg[i,], type"l", ylab="", xlab="" )
+    dev.off()
 }
