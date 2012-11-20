@@ -1,5 +1,5 @@
 load <- function(){
-    t <- as.matrix( read.csv("data/report.csv", header = FALSE, strip.white=TRUE) )
+    t <- as.matrix( read.csv("data/homogeneity.csv", header = FALSE, strip.white=TRUE) )
     #class( t )
     #dim( t )
     #fix( hg )
@@ -15,16 +15,14 @@ run <- function() {
         mgp = c( 2, .5, 0 ), 
         cex = 0.7 )
 
+    png( "img/img%02d.png", width=500, height=200 )
     for( i in 1:nrow( hg ) ){
-        file<-paste( paste("report/img", i, sep="" ), ".png", sep="" )
-
-        png( file, width=500, height=200 )
         plot( hg[i,], 
             ylim = c( 0, mx ),
             type = "s", ylab = "", xlab = "" )
         grid()
-        dev.off()
     }
+    dev.off()
 
     plot( hg[10,], 
         ylim = c( 0, mx ),
